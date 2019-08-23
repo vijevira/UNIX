@@ -1,0 +1,13 @@
+echo "program for calculating average of N numbers"
+echo "enter total number"
+read n
+echo "enter all numbers one by one"
+a=0
+s=0
+while [ $a -lt $n ]
+do
+   read k
+   s=`expr $s \+ $k`
+   a=`expr $a + 1`
+done
+echo "total sum = $s"
