@@ -1,0 +1,9 @@
+echo "here is program for calculating simple intrest"
+echo "enter your amount"
+read p
+echo "enter rate"
+read r
+echo "enter time"
+read t
+s=`expr $p \* $r \* $t / 100`
+echo "simple intrest = $s"
