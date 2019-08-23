@@ -1,0 +1,10 @@
+
+echo "here is program for calculating salary"
+echo "enter basic"
+read b
+dp=`expr $b / 2`
+s=`expr $b \+ $dp`
+da=`expr $s \* 56 / 100`
+salary=`expr $s \+ $da`
+echo "Salary = $salary"
+
