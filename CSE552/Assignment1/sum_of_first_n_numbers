@@ -1,0 +1,8 @@
+echo "program for calculating sum of n integers"
+echo "enter n"
+read n
+p=`expr $n \+ 1`
+s=`expr $n \* $p / 2`
+echo "total sum = $s"
+
+
