@@ -1,0 +1,33 @@
+echo "enter length of sides of triangle"
+read a
+read b
+read c
+s1=`expr $a + $b`
+s2=`expr $b + $c`
+s3=`expr $a + $c`
+if test $s1 -gt $c -a $s2 -gt $a -a $s3 -gt $b
+then
+ echo "valid triangle"
+ if test $a -eq $b -o $b -eq $c -o $c -eq $a
+ then
+  if test $a -eq $b -a $b -eq $c
+  then
+   echo "equilateral"
+  else
+   echo "isosceles"
+  fi
+ else
+  s1=`expr $a \* $a`
+  s2=`expr $b \* $b`
+  s3=`expr $c \* $c`
+  if test `expr $s1 + $s2` -eq $s3 -o `expr  $s2 + $s3` -eq $s1 -o `expr $s3 + $s1` -eq $s2
+  then
+    echo "right angled triangle"
+  else                                                                                                                                                                                                                 echo "scalene triangle"                                                                                                                                                                                          fi                                                                                                                                                                                                                fi
+
+
+else
+ echo "inavalid triangle"
+fi
+
+
